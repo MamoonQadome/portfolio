@@ -1,5 +1,19 @@
+:root{
+  --header-background-color: #2C2E3A;
+  --header-titles-color: #B3B4BD;
+  --header-titles-background-on-hover: #050A44;
+  --body-background-color: #B3B4BD;
+  --input-background-color: #0303034b;
+  --input-font-color:#b8b4b4;
+  --focus-input-border-color: #030303f6;
+  --focus-input-background-color: #030303a6;
+  --hover-submit-button: #0303039b;
+  --submit-button-text: #ffffff67;
+}
+
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
