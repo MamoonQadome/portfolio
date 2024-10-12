@@ -59,6 +59,8 @@ export const HeaderTitle = styled(NavLink)`
       width: 80%;
       left: 10%;
       transform: translateX(0);
+      pointer-events: none;
+
     }
   }
 `;
