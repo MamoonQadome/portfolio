@@ -9,10 +9,11 @@ import {
   ProjectHeader,
   SkillsLearned,
 } from "./ProjectCardStyledComponent";
+
 export default function ProjectCardComponent({ data }) {
   return (
     <CardContainer>
-      <ImageHolder src={data.image} />
+      <ImageHolder src={`${process.env.PUBLIC_URL}/${data.image}`} alt={data.projectName} />
       <SkillsLearned>
         Skills Learned:
         {data.skillsLearned.map((skill, index) => (
@@ -21,15 +22,17 @@ export default function ProjectCardComponent({ data }) {
       </SkillsLearned>
       <InformationContainer>
         <DetailsContainer>
-          <ProjectHeader  onClick={() => window.open(data.link, "_blank", "noopener")}>{data.projectName}</ProjectHeader>
+          <ProjectHeader onClick={() => window.open(data.link, "_blank", "noopener")}>
+            {data.projectName}
+          </ProjectHeader>
           <Description>
             <span>Description:</span> {data.description}
           </Description>
 
           <Contributions>
             Contributions:
-            {data.contributions.map((contributions, index) => (
-              <li key={index}>{contributions}</li>
+            {data.contributions.map((contribution, index) => (
+              <li key={index}>{contribution}</li>
             ))}
           </Contributions>
         </DetailsContainer>

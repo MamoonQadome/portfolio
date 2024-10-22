@@ -48,7 +48,7 @@ export default function ContaceMeComponent() {
     event.preventDefault();
 
     if(isFormValid()){
-      return
+      return;
     }
 
     const formData = new FormData();
@@ -75,33 +75,29 @@ export default function ContaceMeComponent() {
   };
 
   const isFormValid = () => {
-    if (
+    return (
       state.firstName.trim() !== "" ||
       state.lastName.trim() !== "" ||
       state.phone.trim() !== "" ||
       state.email.trim() !== "" ||
       state.message.trim() !== ""
-    ) {
-      return true;
-    }
-
-    return false;
+    );
   };
 
   return (
     <ContactMeContainer>
       {!isTablet && (
         <LeftSideContainer>
-          <ContactMeImage src="contact_me.png" />
+          <ContactMeImage src={`${process.env.PUBLIC_URL}/contact_me.png`} />
           <LinksContainer>
             <IconWrapper href={socialMedia.instagram} target="_blank">
-              <img src="instagram_logo.svg" alt="instagram" />
+              <img src={`${process.env.PUBLIC_URL}/instagram_logo.svg`} alt="instagram" />
             </IconWrapper>
             <IconWrapper href={socialMedia.facebook} target="_blank">
-              <img src="facebook_logo.svg" alt="facebook" />
+              <img src={`${process.env.PUBLIC_URL}/facebook_logo.svg`} alt="facebook" />
             </IconWrapper>
             <IconWrapper href={socialMedia.linkedIn} target="_blank">
-              <img src="linkedin_logo.svg" alt="insta_logo" />
+              <img src={`${process.env.PUBLIC_URL}/linkedin_logo.svg`} alt="linkedin" />
             </IconWrapper>
           </LinksContainer>
         </LeftSideContainer>
@@ -152,16 +148,16 @@ export default function ContaceMeComponent() {
       </RightSideContainer>
       {isTablet && (
         <LeftSideContainer>
-          <ContactMeImage src="contact_me.png" />
+          <ContactMeImage src={`${process.env.PUBLIC_URL}/contact_me.png`} />
           <LinksContainer>
             <IconWrapper href={socialMedia.instagram} target="_blank">
-              <img src="instagram_logo.svg" alt="instagram" />
+              <img src={`${process.env.PUBLIC_URL}/instagram_logo.svg`} alt="instagram" />
             </IconWrapper>
             <IconWrapper href={socialMedia.facebook} target="_blank">
-              <img src="facebook_logo.svg" alt="facebook" />
+              <img src={`${process.env.PUBLIC_URL}/facebook_logo.svg`} alt="facebook" />
             </IconWrapper>
             <IconWrapper href={socialMedia.linkedIn} target="_blank">
-              <img src="linkedin_logo.svg" alt="insta_logo" />
+              <img src={`${process.env.PUBLIC_URL}/linkedin_logo.svg`} alt="linkedin" />
             </IconWrapper>
           </LinksContainer>
         </LeftSideContainer>

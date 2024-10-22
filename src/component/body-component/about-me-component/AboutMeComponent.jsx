@@ -21,7 +21,7 @@ export default function AboutMeComponent() {
 
   return (
     <AboutMeContainer>
-      <Picture src="Mamoun_pic2.png" />
+      <Picture src={`${process.env.PUBLIC_URL}/Mamoun_pic2.png`} />
       <RightSideContainer>
         <Paragraph>{aboutMeParagraph}</Paragraph>
         <DownloadButton>
